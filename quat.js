@@ -24,9 +24,9 @@ export const getEuler = ({w, x, y, z}) => {
   const t0 = 2 * (w * x + y * z)
   const t1 = 1 - 2 * ( x * x + yy)
 
-  const t2 = t2 > 1 ? 1
-    : t2 < 1 ? -1
-      : 2 * (w * y - z * x)
+  var t2 = 2 * (w * y - z * x);
+  t2 = t2 > 1 ? 1 : t2
+  t2 = t2 < -1 ? -1 : t2
 
   const t3 = 2 * (w * z + x * y)
   const t4 = 1 - 2 * (yy + z * z)
